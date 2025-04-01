@@ -1,0 +1,13 @@
+Drop table координаты_площади;
+Drop table координаты_профиля;
+Drop table список_участников;
+Drop table список_измерений;
+Drop table список_пунктов;
+Drop table список_профилей;
+Drop table список_площадей;
+Drop table Пользователь;
+Drop table Измерения;
+Drop table Пункты_наблюд;
+Drop table Профиль;
+Drop table Площадь;
+Drop table проект;
