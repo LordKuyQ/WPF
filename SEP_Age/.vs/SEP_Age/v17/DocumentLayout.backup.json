@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "X:\\GIT\\WPF\\SEP_Age\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u043F\u0440\u043E\u0435\u043A\u0442.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u0440\u043E\u0435\u043A\u0442.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\sep_age.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\sep_age.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T15:33:20.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\AppDbContext.cs",
+              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAuwJ0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T15:26:44.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SEP_Age",
+              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\SEP_Age.csproj",
+              "RelativeDocumentMoniker": "SEP_Age\\SEP_Age.csproj",
+              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\SEP_Age.csproj",
+              "RelativeToolTip": "SEP_Age\\SEP_Age.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-01T14:59:06.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SEP_Age\\MainWindow.xaml",
+              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml",
+              "RelativeToolTip": "SEP_Age\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T14:56:08.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\MainWindow.xaml.cs",
+              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SEP_Age\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T14:56:06.489Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

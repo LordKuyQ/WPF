@@ -1,0 +1,100 @@
+-- Создание таблицы Проект
+CREATE TABLE Проект (
+    id INTEGER PRIMARY KEY,
+    дата_начала DATE,
+    дата_конца DATE,
+    цена INTEGER
+);
+
+-- Создание таблицы Площадь
+CREATE TABLE Площадь (
+    id INTEGER PRIMARY KEY,
+    координаты INTEGER,
+    площадь INTEGER
+);
+
+-- Создание таблицы Профиль
+CREATE TABLE Профиль (
+    id INTEGER PRIMARY KEY,
+    длина INTEGER,
+    высота INTEGER,
+    описание TEXT
+);
+
+-- Создание таблицы Пункты_наблюд
+CREATE TABLE Пункты_наблюд (
+    id INTEGER PRIMARY KEY,
+    x INTEGER,
+    y INTEGER
+);
+
+-- Создание таблицы Измерения
+CREATE TABLE Измерения (
+    id INTEGER PRIMARY KEY,
+    давление INTEGER,
+    описание TEXT
+);
+
+-- Создание таблицы Пользователь
+CREATE TABLE Пользователь (
+    id INTEGER PRIMARY KEY,
+    тип_пользователя TEXT,
+    ФИО TEXT,
+    Телефон INTEGER
+);
+
+-- Создание таблицы список_площадей
+CREATE TABLE список_площадей (
+    id_проекта INTEGER,
+    id_площади INTEGER,
+    FOREIGN KEY (id_проекта) REFERENCES Проект(id),
+    FOREIGN KEY (id_площади) REFERENCES Площадь(id)
+);
+
+-- Создание таблицы список_профилей
+CREATE TABLE список_профилей (
+    id_площади INTEGER,
+    id_профиля INTEGER,
+    FOREIGN KEY (id_площади) REFERENCES Площадь(id),
+    FOREIGN KEY (id_профиля) REFERENCES Профиль(id)
+);
+
+-- Создание таблицы список_пунктов
+CREATE TABLE список_пунктов (
+    id_профиля INTEGER,
+    id_пункта INTEGER,
+    FOREIGN KEY (id_профиля) REFERENCES Профиль(id),
+    FOREIGN KEY (id_пункта) REFERENCES Пункты_наблюд(id)
+);
+
+-- Создание таблицы список_измерений
+CREATE TABLE список_измерений (
+    id_пункта INTEGER,
+    id_измерения INTEGER,
+    FOREIGN KEY (id_пункта) REFERENCES Пункты_наблюд(id),
+    FOREIGN KEY (id_измерения) REFERENCES Измерения(id)
+);
+
+-- Создание таблицы список_участников
+CREATE TABLE список_участников (
+    id_проекта INTEGER,
+    id_пользователя INTEGER,
+    FOREIGN KEY (id_проекта) REFERENCES Проект(id),
+    FOREIGN KEY (id_пользователя) REFERENCES Пользователь(id)
+);
+
+-- Создание таблицы координаты_площади
+CREATE TABLE координаты_площади (
+    id_площади INTEGER,
+    x INTEGER,
+    y INTEGER,
+    FOREIGN KEY (id_площади) REFERENCES Площадь(id)
+);
+
+-- Создание таблицы координаты_профиля
+CREATE TABLE координаты_профиля (
+    id_площади INTEGER,
+    x INTEGER,
+    y INTEGER,
+    FOREIGN KEY (id_площади) REFERENCES Площадь(id)
+);
