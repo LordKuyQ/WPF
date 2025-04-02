@@ -31,7 +31,7 @@ namespace SEP_Age.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\BD\\Age.db");
+            optionsBuilder.UseSqlite("Data Source=G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\BD\\Age.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
