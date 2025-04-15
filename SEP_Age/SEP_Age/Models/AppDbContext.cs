@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Controls;
 using Microsoft.EntityFrameworkCore;
 
 namespace SEP_Age.Models
@@ -31,7 +32,10 @@ namespace SEP_Age.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\BD\\Age.db");
+            //string databasePath = "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\BD\\Age.db";
+            string databasePath = @"X:\GIT\WPF\SEP_Age\SEP_Age\BD\Age.db";
+            Console.WriteLine($"Database path: {databasePath}");
+            optionsBuilder.UseSqlite($"Data Source={databasePath}");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -76,6 +80,9 @@ namespace SEP_Age.Models
                 entity.Property(e => e.Id).ValueGeneratedNever().HasColumnName("id");
                 entity.Property(e => e.ТипПользователя).HasColumnName("тип_пользователя");
                 entity.Property(e => e.Фио).HasColumnName("ФИО");
+                entity.Property(e => e.Телефон).HasColumnName("телефон");
+                entity.Property(e => e.Емайл).HasColumnName("емайл");
+                entity.Property(e => e.Пароль).HasColumnName("пароль");
             });
 
             modelBuilder.Entity<Проект>(entity =>

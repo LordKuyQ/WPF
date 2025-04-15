@@ -10,7 +10,7 @@
     
     <Grid Margin="0,10,0,0" x:Name="Base">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
@@ -63,9 +63,9 @@
                 <Label Content="Измерения" FontSize="16" FontWeight="Bold"/>
                 <DataGrid x:Name="измеренияGrid" Margin="0,32,0,0" MouseDoubleClick="измеренияGrid_MouseDoubleClick"/>
             </Grid>
-            <Image Grid.Row="1" x:Name="pictureBox" Width="420" Height="360" />
+            <Image Grid.Row="1" x:Name="pictureBox" Width="420" Height="360" Visibility="Hidden"/>
             <DataGrid Grid.Row="1" x:Name="кордыGrid" Margin="0,32,0,0" Visibility="Hidden"/>
-            <lvc:CartesianChart Grid.Row="1" x:Name="MeasurementsChart" Series="{Binding SeriesCollection}" />
+            <lvc:CartesianChart Grid.Row="1" x:Name="MeasurementsChart" Series="{Binding SeriesCollection}" Visibility="Hidden"/>
         </Grid>
     </Grid>
 </Window>

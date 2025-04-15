@@ -12,6 +12,7 @@ using LiveCharts.Defaults;
 using LiveCharts.Wpf;
 using LiveCharts.Definitions.Charts;
 using System.Collections.ObjectModel;
+using SEP_Age.Auto;
 
 namespace SEP_Age
 {
@@ -24,11 +25,22 @@ namespace SEP_Age
 
         public MainWindow()
         {
-            InitializeComponent();
+
             SeriesCollection = new SeriesCollection();
             ChartValues = new ObservableCollection<ObservableValue>();
-            LoadData();
             DataContext = this;
+
+            AutUser autUser = new AutUser();
+
+            autUser.ShowDialog();
+
+            if (autUser.DialogResult == false)
+            {
+                Close();
+            }
+
+            InitializeComponent();
+            LoadData();
         }
 
         private void LoadData()
@@ -93,6 +105,8 @@ namespace SEP_Age
         }
         private void DrawПлощади(List<КоординатыПлощади> координаты)
         {
+            pictureBox.Visibility = Visibility.Visible;
+            MeasurementsChart.Visibility = Visibility.Hidden;
             Bitmap bitmap = new Bitmap(420,360);
             using (Graphics graphics = Graphics.FromImage(bitmap))
             {
@@ -126,6 +140,8 @@ namespace SEP_Age
 
         private void DrawПрофили(List<КоординатыПрофиля> координаты)
         {
+            pictureBox.Visibility = Visibility.Visible;
+            MeasurementsChart.Visibility = Visibility.Hidden;
             Bitmap bitmap = new Bitmap(420, 360);
             using (Graphics graphics = Graphics.FromImage(bitmap))
             {
@@ -200,6 +216,8 @@ namespace SEP_Age
         }
         private void измеренияGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            pictureBox.Visibility = Visibility.Hidden;
+            MeasurementsChart.Visibility = Visibility.Visible;
             var selectedMeasurement = измеренияGrid.SelectedItem as Измерения;
             if (selectedMeasurement != null)
             {
@@ -245,6 +263,8 @@ namespace SEP_Age
             {
                 MessageBox.Show($"Ошибка при сбросе данных: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            pictureBox.Visibility = Visibility.Hidden;
+            MeasurementsChart.Visibility = Visibility.Hidden;
         }
     }
 }
