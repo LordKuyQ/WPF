@@ -323,8 +323,6 @@ G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\refint\SEP_Age.dll
 G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\SEP_Age.pdb
 G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\SEP_Age.genruntimeconfig.cache
 G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\ref\SEP_Age.dll
-G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\EnterWindow.g.cs
-G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\EnterWindow.baml
 G:\6SENESTR\AGE\SEP_Age\SEP_Age\bin\Debug\net8.0-windows\Microsoft.Win32.SystemEvents.dll
 G:\6SENESTR\AGE\SEP_Age\SEP_Age\bin\Debug\net8.0-windows\System.Drawing.Common.dll
 G:\6SENESTR\AGE\SEP_Age\SEP_Age\bin\Debug\net8.0-windows\System.Private.Windows.Core.dll
@@ -342,3 +340,7 @@ X:\GIT\WPF\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\AutUser.g.cs
 X:\GIT\WPF\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\RegUser.g.cs
 X:\GIT\WPF\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\AutUser.baml
 X:\GIT\WPF\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\RegUser.baml
+G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\AutUser.g.cs
+G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\RegUser.g.cs
+G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\AutUser.baml
+G:\6SENESTR\AGE\SEP_Age\SEP_Age\obj\Debug\net8.0-windows\Auto\RegUser.baml

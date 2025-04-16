@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using Microsoft.EntityFrameworkCore;
@@ -32,8 +33,11 @@ namespace SEP_Age.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //string databasePath = "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\BD\\Age.db";
-            string databasePath = @"X:\GIT\WPF\SEP_Age\SEP_Age\BD\Age.db";
+            string primaryDatabasePath = @"G:\6SENESTR\AGE\SEP_Age\SEP_Age\BD\Age.db";
+            string secondaryDatabasePath = @"X:\GIT\WPF\SEP_Age\SEP_Age\BD\Age.db";
+
+            string databasePath = File.Exists(primaryDatabasePath) ? primaryDatabasePath : secondaryDatabasePath;
+
             Console.WriteLine($"Database path: {databasePath}");
             optionsBuilder.UseSqlite($"Data Source={databasePath}");
         }

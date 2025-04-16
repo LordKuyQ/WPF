@@ -13,6 +13,7 @@ using LiveCharts.Wpf;
 using LiveCharts.Definitions.Charts;
 using System.Collections.ObjectModel;
 using SEP_Age.Auto;
+using Microsoft.EntityFrameworkCore;
 
 namespace SEP_Age
 {
@@ -72,7 +73,7 @@ namespace SEP_Age
                 using (_context = new AppDbContext())
                 {
                     var площади = _context.СписокПлощадейs
-                        .Where(sp => sp.IdПроекта == selectedProject.Id) 
+                        .Where(sp => sp.IdПроекта == selectedProject.Id)
                         .Select(sp => sp.IdПлощадиNavigation)
                         .ToList();
 
@@ -107,7 +108,7 @@ namespace SEP_Age
         {
             pictureBox.Visibility = Visibility.Visible;
             MeasurementsChart.Visibility = Visibility.Hidden;
-            Bitmap bitmap = new Bitmap(420,360);
+            Bitmap bitmap = new Bitmap(420, 360);
             using (Graphics graphics = Graphics.FromImage(bitmap))
             {
 
@@ -188,7 +189,7 @@ namespace SEP_Age
                     пунктыНаблюденияGrid.ItemsSource = пункты;
 
                     var координаты = _context.КоординатыПрофиляs
-                        .Where(k => k.IdПлощади == selectedПрофиль.Id) 
+                        .Where(k => k.IdПлощади == selectedПрофиль.Id)
                         .ToList();
 
                     кордыGrid.ItemsSource = координаты;
@@ -266,5 +267,109 @@ namespace SEP_Age
             pictureBox.Visibility = Visibility.Hidden;
             MeasurementsChart.Visibility = Visibility.Hidden;
         }
+
+        private void синтButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (var context = new AppDbContext())
+                {
+                    var random = new Random();
+
+                    var новыйПроект = new Проект
+                    {
+                        Id = context.Проектs.Max(p => p.Id) + 1,
+                        ДатаНачала = DateTime.Now,
+                        ДатаКонца = DateTime.Now.AddDays(30),
+                        Цена = random.Next(10000, 10000000)
+                    };
+                    context.Проектs.Add(новыйПроект);
+                    context.SaveChanges(); 
+
+                    var новаяПлощадь = new Площадь
+                    {
+                        Id = context.Площадьs.Max(p => p.Id) + 1,
+                        Площадь1 = random.Next(10, 1000),
+                        Координаты = random.Next(100, 1000)
+                    };
+                    context.Площадьs.Add(новаяПлощадь);
+                    context.SaveChanges();
+
+                    context.Database.ExecuteSqlRaw(
+                        "INSERT INTO список_площадей (id_проекта, id_площади) VALUES ({0}, {1})",
+                        новыйПроект.Id, новаяПлощадь.Id);
+
+                    for (int k = 0; k < 3; k++)
+                    {
+                        context.Database.ExecuteSqlRaw(
+                            "INSERT INTO координаты_площади (id_площади, x, y) VALUES ({0}, {1}, {2})",
+                            новаяПлощадь.Id, random.Next(0, 100), random.Next(0, 100));
+                    }
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        var новыйПрофиль = new Профиль
+                        {
+                            Id = context.Профильs.Max(p => p.Id) + 1,
+                            Длина = random.Next(10, 1000),
+                            Высота = random.Next(10, 100),
+                            Описание = $"Профиль {i + 1}"
+                        };
+                        context.Профильs.Add(новыйПрофиль);
+                        context.SaveChanges();
+
+                        context.Database.ExecuteSqlRaw(
+                            "INSERT INTO список_профилей (id_площади, id_профиля) VALUES ({0}, {1})",
+                            новаяПлощадь.Id, новыйПрофиль.Id);
+
+                        for (int k = 0; k < 3; k++)
+                        {
+                            context.Database.ExecuteSqlRaw(
+                                "INSERT INTO координаты_профиля (id_площади, x, y) VALUES ({0}, {1}, {2})",
+                                новыйПрофиль.Id, random.Next(0, 100), random.Next(0, 100));
+                        }
+
+                        for (int j = 0; j < 3; j++)
+                        {
+                            var новоеИзмерение = new Измерения
+                            {
+                                Id = context.Измеренияs.Max(p => p.Id) + 1,
+                                Давление = random.Next(10, 1000) + j,
+                                Описание = $"Измерение {j + 1}"
+                            };
+                            context.Измеренияs.Add(новоеИзмерение);
+                            context.SaveChanges();
+
+                            var новыйПункт = new ПунктыНаблюд
+                            {
+                                Id = context.ПунктыНаблюдs.Max(p => p.Id) + 1,
+                                X = j * random.Next(1, 100),
+                                Y = j * random.Next(1, 100)
+                            };
+                            context.ПунктыНаблюдs.Add(новыйПункт);
+                            context.SaveChanges();
+
+                            context.Database.ExecuteSqlRaw(
+                                "INSERT INTO список_измерений (id_пункта, id_измерения) VALUES ({0}, {1})",
+                                новыйПункт.Id, новоеИзмерение.Id);
+
+                            context.Database.ExecuteSqlRaw(
+                                "INSERT INTO список_пунктов (id_профиля, id_пункта) VALUES ({0}, {1})",
+                                новыйПрофиль.Id, новыйПункт.Id);
+                        }
+                    }
+                    LoadData();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при создании проекта: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
     }
+
+
 }
+

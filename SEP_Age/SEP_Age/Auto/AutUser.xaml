@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SEP_Age.Auto"
         mc:Ignorable="d"
-        Title="AutUser" Height="180" Width="200">
+        Title="AutUser" Height="208" Width="260">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <StackPanel Margin="15" Orientation="Horizontal">
             <TextBox Name="BoxName" MinWidth="120"/>

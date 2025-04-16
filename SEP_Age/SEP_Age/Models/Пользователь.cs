@@ -14,5 +14,6 @@ public partial class Пользователь
     public int? Телефон { get; set; }
 
     public string? Емайл { get; set; }
+
     public string? Пароль { get; set; }
 }

@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:SEP_Age"
         mc:Ignorable="d"
         Title="MainWindow" Height="768 " Width="1366">
-    
+
     <Grid Margin="0,10,0,0" x:Name="Base">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -20,32 +20,43 @@
                 <RowDefinition Height="15*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <Button x:Name="сбросButton" Content="Сброс" Click="сбросButton_Click" Margin="3"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="9*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="синтButton" Grid.Column="0" Content="Генерация" Click="синтButton_Click" Margin="3"/>
+                    <Button x:Name="сбросButton" Grid.Column="1" Content="Сброс" Click="сбросButton_Click" Margin="3"/>
+                </Grid>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0" Margin="0,0,10,0">
+                    <Button x:Name="проектыBtn" Height="32" Width="32" Margin="277,0,0,645">+</Button>
                     <Label Content="Проекты" FontSize="16" FontWeight="Bold"/>
                     <DataGrid x:Name="проектыGrid" Margin="0,32,0,0" MouseDoubleClick="проектыGrid_MouseDoubleClick"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Margin="0,0,10,0">
+                    <Button x:Name="площадиBtn" Height="32" Width="32" Margin="170,0,0,645">+</Button>
                     <Label Content="Площади" FontSize="16" FontWeight="Bold"/>
                     <DataGrid x:Name="площадиGrid" Margin="0,32,0,0" MouseDoubleClick="площадиGrid_MouseDoubleClick"/>
                 </Grid>
 
                 <Grid Grid.Column="2" Margin="0,0,10,0">
+                    <Button x:Name="профилиBtn" Height="32" Width="32" Margin="170,0,0,645">+</Button>
                     <Label Content="Профили" FontSize="16" FontWeight="Bold"/>
                     <DataGrid x:Name="профилиGrid" Margin="0,32,0,0" MouseDoubleClick="профилиGrid_MouseDoubleClick"/>
                 </Grid>
 
                 <Grid Grid.Column="3" Margin="0,0,10,0">
+                    <Button x:Name="пунктыНаблюденияBtn" Height="32" Width="32" Margin="170,0,0,645">+</Button>
                     <Label Content="Пункты наблюдения" FontSize="16" FontWeight="Bold"/>
                     <DataGrid x:Name="пунктыНаблюденияGrid" Margin="0,32,0,0"  MouseDoubleClick="пунктыНаблюденияGrid_MouseDoubleClick"/>
                 </Grid>
@@ -59,6 +70,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+            <Button Grid.Row="0" x:Name="измеренияBtn" Height="32" Width="32" Margin="338,0,0,329">+</Button>
             <Grid Grid.Row="0" Margin="0,0,0,10">
                 <Label Content="Измерения" FontSize="16" FontWeight="Bold"/>
                 <DataGrid x:Name="измеренияGrid" Margin="0,32,0,0" MouseDoubleClick="измеренияGrid_MouseDoubleClick"/>

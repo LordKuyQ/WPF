@@ -1,70 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\GIT\\WPF\\SEP_Age\\",
+  "WorkspaceRootPath": "G:\\6SENESTR\\AGE\\SEP_Age\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\auto\\reguser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\reguser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\auto\\reguser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\reguser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\auto\\autuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\autuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\auto\\autuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\autuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\sep_age.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\sep_age.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u043B\u043E\u0449\u0430\u0434\u0438.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u043B\u043E\u0449\u0430\u0434\u0438.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u0440\u043E\u0444\u0438\u043B\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u0440\u043E\u0444\u0438\u043B\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u043F\u0443\u043D\u043A\u0442\u044B\u043D\u0430\u0431\u043B\u044E\u0434.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u0443\u043D\u043A\u0442\u044B\u043D\u0430\u0431\u043B\u044E\u0434.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u0441\u043F\u0438\u0441\u043E\u043A\u043F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u0441\u043F\u0438\u0441\u043E\u043A\u043F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u0441\u043F\u0438\u0441\u043E\u043A\u043F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|x:\\git\\wpf\\sep_age\\sep_age\\models\\\u043F\u0440\u043E\u0435\u043A\u0442.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\auto\\autuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\autuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043F\u043B\u043E\u0449\u0430\u0434\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u043B\u043E\u0449\u0430\u0434\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043F\u0440\u043E\u0435\u043A\u0442.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u0440\u043E\u0435\u043A\u0442.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u0440\u043E\u0444\u0438\u043B\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u0440\u043E\u0444\u0438\u043B\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043F\u0440\u043E\u0444\u0438\u043B\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u0440\u043E\u0444\u0438\u043B\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u043B\u043E\u0449\u0430\u0434\u0438.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u043F\u043B\u043E\u0449\u0430\u0434\u0438.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\auto\\reguser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\reguser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\auto\\reguser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\reguser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\auto\\autuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\auto\\autuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\sep_age.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\sep_age.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|g:\\6senestr\\age\\sep_age\\sep_age\\models\\\u043F\u0443\u043D\u043A\u0442\u044B\u043D\u0430\u0431\u043B\u044E\u0434.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E633A71-9C6A-4CE2-AC3A-FD1B2316FA9C}|SEP_Age\\SEP_Age.csproj|solutionrelative:sep_age\\models\\\u043F\u0443\u043D\u043A\u0442\u044B\u043D\u0430\u0431\u043B\u044E\u0434.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,128 +82,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.xaml",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\App.xaml",
-              "RelativeDocumentMoniker": "SEP_Age\\App.xaml",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\App.xaml",
-              "RelativeToolTip": "SEP_Age\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-15T09:31:08.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AutUser.xaml.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Auto\\AutUser.xaml.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml.cs",
-              "RelativeToolTip": "SEP_Age\\Auto\\AutUser.xaml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:51:54.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Models\\AppDbContext.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\AppDbContext.cs",
-              "RelativeToolTip": "SEP_Age\\Models\\AppDbContext.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAADwv1MAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:26:44.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AutUser.xaml",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml",
-              "RelativeDocumentMoniker": "SEP_Age\\Auto\\AutUser.xaml",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml",
-              "RelativeToolTip": "SEP_Age\\Auto\\AutUser.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-15T08:50:57.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegUser.xaml",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml",
-              "RelativeDocumentMoniker": "SEP_Age\\Auto\\RegUser.xaml",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml",
-              "RelativeToolTip": "SEP_Age\\Auto\\RegUser.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-15T08:51:35.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegUser.xaml.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Auto\\RegUser.xaml.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml.cs",
-              "RelativeToolTip": "SEP_Age\\Auto\\RegUser.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:52:15.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
-              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:53:43.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\MainWindow.xaml.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml.cs",
-              "RelativeToolTip": "SEP_Age\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAPEAAAAAAAAAAAA7wPcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:56:06.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
-              "RelativeToolTip": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:31:32.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\MainWindow.xaml",
               "RelativeDocumentMoniker": "SEP_Age\\MainWindow.xaml",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\MainWindow.xaml",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\MainWindow.xaml",
               "RelativeToolTip": "SEP_Age\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-01T14:56:08.535Z",
@@ -203,11 +98,187 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:31:21.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\MainWindow.xaml.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "SEP_Age\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAGABAAAAAAAAAAAAAHoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T14:56:06.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u043B\u043E\u0449\u0430\u0434\u0438.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:31:32.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T16:11:03.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\AppDbContext.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAwwJoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T15:26:44.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AutUser.xaml",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml",
+              "RelativeDocumentMoniker": "SEP_Age\\Auto\\AutUser.xaml",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml",
+              "RelativeToolTip": "SEP_Age\\Auto\\AutUser.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T08:50:57.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "\u041F\u0440\u043E\u0444\u0438\u043B\u044C.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0444\u0438\u043B\u044C.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u0440\u043E\u0444\u0438\u043B\u044C.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0444\u0438\u043B\u044C.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u0440\u043E\u0444\u0438\u043B\u044C.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T03:02:18.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "\u041F\u043B\u043E\u0449\u0430\u0434\u044C.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u043B\u043E\u0449\u0430\u0434\u044C.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u043B\u043E\u0449\u0430\u0434\u044C.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u043B\u043E\u0449\u0430\u0434\u044C.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u043B\u043E\u0449\u0430\u0434\u044C.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T03:02:18.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T15:33:20.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
+              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T08:53:43.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegUser.xaml.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Auto\\RegUser.xaml.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml.cs",
+              "RelativeToolTip": "SEP_Age\\Auto\\RegUser.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T08:52:15.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegUser.xaml",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml",
+              "RelativeDocumentMoniker": "SEP_Age\\Auto\\RegUser.xaml",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\RegUser.xaml",
+              "RelativeToolTip": "SEP_Age\\Auto\\RegUser.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T08:51:35.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AutUser.xaml.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml.cs",
+              "RelativeDocumentMoniker": "SEP_Age\\Auto\\AutUser.xaml.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Auto\\AutUser.xaml.cs",
+              "RelativeToolTip": "SEP_Age\\Auto\\AutUser.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T08:51:54.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "App.xaml",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\App.xaml",
+              "RelativeDocumentMoniker": "SEP_Age\\App.xaml",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\App.xaml",
+              "RelativeToolTip": "SEP_Age\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T09:31:08.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
               "RelativeDocumentMoniker": "SEP_Age\\Models\\\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
               "RelativeToolTip": "SEP_Age\\Models\\\u0418\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -215,11 +286,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "SEP_Age.csproj",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\SEP_Age.csproj",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\SEP_Age.csproj",
               "RelativeDocumentMoniker": "SEP_Age\\SEP_Age.csproj",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\SEP_Age.csproj",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\SEP_Age.csproj",
               "RelativeToolTip": "SEP_Age\\SEP_Age.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -227,47 +298,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "\u041F\u0440\u043E\u0435\u043A\u0442.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
-              "RelativeToolTip": "SEP_Age\\Models\\\u041F\u0440\u043E\u0435\u043A\u0442.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:33:20.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
-              "RelativeToolTip": "SEP_Age\\Models\\\u041A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B\u041F\u0440\u043E\u0444\u0438\u043B\u044F.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:31:21.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
-              "RelativeDocumentMoniker": "SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
-              "RelativeToolTip": "SEP_Age\\Models\\\u0421\u043F\u0438\u0441\u043E\u043A\u041F\u043B\u043E\u0449\u0430\u0434\u0435\u0439.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T16:11:03.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
-              "DocumentMoniker": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
+              "DocumentMoniker": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
               "RelativeDocumentMoniker": "SEP_Age\\Models\\\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
-              "ToolTip": "X:\\GIT\\WPF\\SEP_Age\\SEP_Age\\Models\\\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
+              "ToolTip": "G:\\6SENESTR\\AGE\\SEP_Age\\SEP_Age\\Models\\\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
               "RelativeToolTip": "SEP_Age\\Models\\\u041F\u0443\u043D\u043A\u0442\u044B\u041D\u0430\u0431\u043B\u044E\u0434.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
