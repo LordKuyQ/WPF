@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SEP_Age")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdefc1f29a519e154c8debc14a0635cd6882c972")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5597d8dcf3df79ede34d8b386fe29884ff0ae389")]
 [assembly: System.Reflection.AssemblyProductAttribute("SEP_Age")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SEP_Age")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

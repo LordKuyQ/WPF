@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\nikitinda\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\nikitinda\\.nuget\\packages",
+      "C:\\Users\\dvoker\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\dvoker\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
