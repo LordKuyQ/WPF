@@ -93,7 +93,7 @@ namespace SEP_Age.Auto {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SEP_Age;V1.0.0.0;component/auto/reguser.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SEP_Age;component/auto/reguser.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Auto\RegUser.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

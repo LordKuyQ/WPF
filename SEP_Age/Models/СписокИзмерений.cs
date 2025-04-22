@@ -1,15 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace SEP_Age.Models;
 
+[Table("список_измерений")]
 public partial class СписокИзмерений
 {
-    public int? IdПункта { get; set; }
+    [Key]
+    [Column("id")]
+    public int Id { get; set; }
 
-    public int? IdИзмерения { get; set; }
+    [Column("id_пункта")]
+    public int IdПункта { get; set; }
 
-    public virtual Измерения? IdИзмеренияNavigation { get; set; }
+    [Column("id_измерения")]
+    public int IdИзмерения { get; set; }
 
-    public virtual ПунктыНаблюд? IdПунктаNavigation { get; set; }
+    [ForeignKey("IdИзмерения")]
+    [InverseProperty("СписокИзмеренийs")]
+    public virtual Измерения IdИзмеренияNavigation { get; set; } = null!;
+
+    [ForeignKey("IdПункта")]
+    [InverseProperty("СписокИзмеренийs")]
+    public virtual ПунктыНаблюд IdПунктаNavigation { get; set; } = null!;
 }

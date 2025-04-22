@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
 
-        <!-- II -->
+        <!-- I -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"/>
@@ -82,13 +82,14 @@
                 <lvc:CartesianChart Grid.Row="1" x:Name="MeasurementsChart" Series="{Binding SeriesCollection}" Visibility="Hidden"/>
             </Grid>
         </Grid>
-        <!-- I -->
+        
+        <!-- II -->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="ПроектыBtn" Content="добавить проекты" Click="проектыGrid_MouseDoubleClick" Margin="3"/>
-            <Button x:Name="ПлощадиBtn" Content="добавить площади" Click="площадиGrid_MouseDoubleClick" Margin="3"/>
-            <Button x:Name="ПрофилиBtn" Content="добавить профили" Click="профилиGrid_MouseDoubleClick" Margin="3"/>
-            <Button x:Name="ПунктыНаблюденияBtn" Content="добавить пункты наблюдения" Click="пунктыНаблюденияGrid_MouseDoubleClick" Margin="3"/>
-            <Button x:Name="ИзмеренияBtn" Content="добавить измерения" Click="измеренияGrid_MouseDoubleClick" Margin="3"/>
+            <Button x:Name="ПроектыBtn" Content="добавить проекты"  Margin="3"/>
+            <Button x:Name="ПлощадиBtn" Content="добавить площади"  Margin="3"/>
+            <Button x:Name="ПрофилиBtn" Content="добавить профили" Margin="3"/>
+            <Button x:Name="ПунктыНаблюденияBtn" Content="добавить пункты наблюдения"  Margin="3"/>
+            <Button x:Name="ИзмеренияBtn" Content="добавить измерения"  Margin="3"/>
         </StackPanel>
     </Grid>
 </Window>

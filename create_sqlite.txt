@@ -1,100 +1,111 @@
 -- Создание таблицы Проект
 CREATE TABLE Проект (
-    id INTEGER PRIMARY KEY,
-    дата_начала DATE,
-    дата_конца DATE,
-    цена INTEGER
+    id INTEGER PRIMARY KEY NOT NULL,
+    дата_начала DATE NOT NULL,
+    дата_конца DATE NOT NULL,
+    цена INTEGER NOT NULL
 );
 
 -- Создание таблицы Площадь
 CREATE TABLE Площадь (
-    id INTEGER PRIMARY KEY,
-    координаты INTEGER,
-    площадь INTEGER
+    id INTEGER PRIMARY KEY NOT NULL,
+    координаты INTEGER NOT NULL,
+    площадь INTEGER NOT NULL
 );
 
 -- Создание таблицы Профиль
 CREATE TABLE Профиль (
-    id INTEGER PRIMARY KEY,
-    длина INTEGER,
-    высота INTEGER,
-    описание TEXT
+    id INTEGER PRIMARY KEY NOT NULL,
+    длина INTEGER NOT NULL,
+    высота INTEGER NOT NULL,
+    описание TEXT NOT NULL
 );
 
 -- Создание таблицы Пункты_наблюд
 CREATE TABLE Пункты_наблюд (
-    id INTEGER PRIMARY KEY,
-    x INTEGER,
-    y INTEGER
+    id INTEGER PRIMARY KEY NOT NULL,
+    x INTEGER NOT NULL,
+    y INTEGER NOT NULL
 );
 
 -- Создание таблицы Измерения
 CREATE TABLE Измерения (
-    id INTEGER PRIMARY KEY,
-    давление INTEGER,
-    описание TEXT
+    id INTEGER PRIMARY KEY NOT NULL,
+    давление INTEGER NOT NULL,
+    описание TEXT NOT NULL,
+    абсолютная_высота INTEGER NOT NULL,
+    расстояние INTEGER NOT NULL
 );
 
 -- Создание таблицы Пользователь
 CREATE TABLE Пользователь (
-    id INTEGER PRIMARY KEY,
-    тип_пользователя TEXT,
-    ФИО TEXT,
-    Телефон INTEGER
+    id INTEGER PRIMARY KEY NOT NULL,
+    тип_пользователя TEXT NOT NULL,
+    ФИО TEXT NOT NULL,
+    пароль TEXT NOT NULL,
+    емайл TEXT NOT NULL,
+    телефон INTEGER NOT NULL
 );
 
 -- Создание таблицы список_площадей
 CREATE TABLE список_площадей (
-    id_проекта INTEGER,
-    id_площади INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_проекта INTEGER NOT NULL,
+    id_площади INTEGER NOT NULL,
     FOREIGN KEY (id_проекта) REFERENCES Проект(id),
     FOREIGN KEY (id_площади) REFERENCES Площадь(id)
 );
 
 -- Создание таблицы список_профилей
 CREATE TABLE список_профилей (
-    id_площади INTEGER,
-    id_профиля INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_площади INTEGER NOT NULL,
+    id_профиля INTEGER NOT NULL,
     FOREIGN KEY (id_площади) REFERENCES Площадь(id),
     FOREIGN KEY (id_профиля) REFERENCES Профиль(id)
 );
 
 -- Создание таблицы список_пунктов
 CREATE TABLE список_пунктов (
-    id_профиля INTEGER,
-    id_пункта INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_профиля INTEGER NOT NULL,
+    id_пункта INTEGER NOT NULL,
     FOREIGN KEY (id_профиля) REFERENCES Профиль(id),
     FOREIGN KEY (id_пункта) REFERENCES Пункты_наблюд(id)
 );
 
 -- Создание таблицы список_измерений
 CREATE TABLE список_измерений (
-    id_пункта INTEGER,
-    id_измерения INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_пункта INTEGER NOT NULL,
+    id_измерения INTEGER NOT NULL,
     FOREIGN KEY (id_пункта) REFERENCES Пункты_наблюд(id),
     FOREIGN KEY (id_измерения) REFERENCES Измерения(id)
 );
 
 -- Создание таблицы список_участников
 CREATE TABLE список_участников (
-    id_проекта INTEGER,
-    id_пользователя INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_проекта INTEGER NOT NULL,
+    id_пользователя INTEGER NOT NULL,
     FOREIGN KEY (id_проекта) REFERENCES Проект(id),
     FOREIGN KEY (id_пользователя) REFERENCES Пользователь(id)
 );
 
 -- Создание таблицы координаты_площади
 CREATE TABLE координаты_площади (
-    id_площади INTEGER,
-    x INTEGER,
-    y INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_площади INTEGER NOT NULL,
+    x INTEGER NOT NULL,
+    y INTEGER NOT NULL,
     FOREIGN KEY (id_площади) REFERENCES Площадь(id)
 );
 
 -- Создание таблицы координаты_профиля
 CREATE TABLE координаты_профиля (
-    id_площади INTEGER,
-    x INTEGER,
-    y INTEGER,
+    id INTEGER PRIMARY KEY NOT NULL,
+    id_площади INTEGER NOT NULL,
+    x INTEGER NOT NULL,
+    y INTEGER NOT NULL,
     FOREIGN KEY (id_площади) REFERENCES Площадь(id)
 );

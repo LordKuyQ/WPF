@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=X:\GIT\WPF\SEP_Age\BD\BD.db" -Provider "Microsoft.EntityFrameworkCore.Sqlite" -OutputDir "Models" -Context "AppDbContext" -DataAnnotations

@@ -18,17 +18,20 @@ namespace SEP_Age.Auto
             {
                 try
                 {
-                    using (_context = new AppDbContext())
+                    if (int.TryParse(BoxName.Text, out int userId))
                     {
-                        var user = _context.Пользовательs.FirstOrDefault(q => q.Емайл == BoxName.Text && q.Пароль == BoxPass.Text);
-                        if (user != null)
+                        using (_context = new AppDbContext())
                         {
-                            DialogResult = true;
-                            return;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Логин или пароль не верны");
+                            var user = _context.Пользовательs.FirstOrDefault(q => q.Id == userId && q.Пароль == BoxPass.Text);
+                            if (user != null)
+                            {
+                                DialogResult = true;
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Логин или пароль не верны");
+                            }
                         }
                     }
                 }
@@ -39,6 +42,7 @@ namespace SEP_Age.Auto
             }
         }
 
+
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
             RegUser regUser = new RegUser();
@@ -47,14 +51,14 @@ namespace SEP_Age.Auto
 
             if (regUser.DialogResult == true)
             {
-                
-                    using (_context = new AppDbContext())
-                    {
-                        _context.Пользовательs.Add(regUser.NewUser);
-                        _context.SaveChanges();
-                    }
-                
-                
+
+                using (_context = new AppDbContext())
+                {
+                    _context.Пользовательs.Add(regUser.NewUser);
+                    _context.SaveChanges();
+                }
+
+
             }
         }
     }

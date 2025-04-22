@@ -1,19 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace SEP_Age.Models;
 
+[Table("Пользователь")]
 public partial class Пользователь
 {
+    [Key]
+    [Column("id")]
     public int Id { get; set; }
 
-    public string? ТипПользователя { get; set; }
+    [Column("тип_пользователя")]
+    public string ТипПользователя { get; set; } = null!;
 
-    public string? Фио { get; set; }
+    [Column("ФИО")]
+    public string Фио { get; set; } = null!;
 
-    public int? Телефон { get; set; }
+    [Column("пароль")]
+    public string Пароль { get; set; } = null!;
 
-    public string? Емайл { get; set; }
+    [Column("емайл")]
+    public string Емайл { get; set; } = null!;
 
-    public string? Пароль { get; set; }
+    [Column("телефон")]
+    public int Телефон { get; set; }
+
+    [InverseProperty("IdПользователяNavigation")]
+    public virtual ICollection<СписокУчастников> СписокУчастниковs { get; set; } = new List<СписокУчастников>();
 }

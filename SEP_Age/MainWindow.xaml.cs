@@ -270,102 +270,102 @@ namespace SEP_Age
 
         private void синтButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 using (var context = new AppDbContext())
                 {
                     var random = new Random();
 
                     var новыйПроект = new Проект
                     {
-                        Id = context.Проектs.Max(p => p.Id) + 1,
-                        ДатаНачала = DateTime.Now,
-                        ДатаКонца = DateTime.Now.AddDays(30),
+                        ДатаНачала = DateOnly.FromDateTime(DateTime.Today),
+                        ДатаКонца = DateOnly.FromDateTime(DateTime.Today.AddDays(30)),
                         Цена = random.Next(10000, 10000000)
                     };
-                    context.Проектs.Add(новыйПроект);
-                    context.SaveChanges(); 
 
                     var новаяПлощадь = new Площадь
                     {
-                        Id = context.Площадьs.Max(p => p.Id) + 1,
                         Площадь1 = random.Next(10, 1000),
                         Координаты = random.Next(100, 1000)
                     };
+
+                    var координатаПлощади = new КоординатыПлощади
+                    {
+                        X = random.Next(0, 100),
+                        Y = random.Next(0, 100),
+                        IdПлощадиNavigation = новаяПлощадь
+                    };
+                    новаяПлощадь.КоординатыПлощадиs = new List<КоординатыПлощади> { координатаПлощади };
+
+                    context.Проектs.Add(новыйПроект);
                     context.Площадьs.Add(новаяПлощадь);
+
+                    context.СписокПлощадейs.Add(new СписокПлощадей
+                    {
+                        IdПроектаNavigation = новыйПроект,
+                        IdПлощадиNavigation = новаяПлощадь
+                    });
+
+                    var профиль = new Профиль
+                    {
+                        Длина = random.Next(10, 1000),
+                        Высота = random.Next(10, 100),
+                        Описание = "Профиль 1"
+                    };
+                    context.Профильs.Add(профиль);
+
+                    context.СписокПрофилейs.Add(new СписокПрофилей
+                    {
+                        IdПлощадиNavigation = новаяПлощадь,
+                        IdПрофиляNavigation = профиль
+                    });
+
+                    context.КоординатыПрофиляs.Add(new КоординатыПрофиля
+                    {
+                        IdПлощадиNavigation = новаяПлощадь,
+                        X = random.Next(0, 100),
+                        Y = random.Next(0, 100)
+                    });
+
+                    var измерение = new Измерения
+                    {
+                        Давление = random.Next(10, 1000),
+                        Описание = "Измерение 1"
+                    };
+                    context.Измеренияs.Add(измерение);
+
+                    var пункт = new ПунктыНаблюд
+                    {
+                        X = random.Next(1, 100),
+                        Y = random.Next(1, 100)
+                    };
+                    context.ПунктыНаблюдs.Add(пункт);
+
+                    context.СписокИзмеренийs.Add(new СписокИзмерений
+                    {
+                        IdИзмеренияNavigation = измерение,
+                        IdПунктаNavigation = пункт
+                    });
+
+                    context.СписокПунктовs.Add(new СписокПунктов
+                    {
+                        IdПрофиляNavigation = профиль,
+                        IdПунктаNavigation = пункт
+                    });
+
                     context.SaveChanges();
-
-                    context.Database.ExecuteSqlRaw(
-                        "INSERT INTO список_площадей (id_проекта, id_площади) VALUES ({0}, {1})",
-                        новыйПроект.Id, новаяПлощадь.Id);
-
-                    for (int k = 0; k < 3; k++)
-                    {
-                        context.Database.ExecuteSqlRaw(
-                            "INSERT INTO координаты_площади (id_площади, x, y) VALUES ({0}, {1}, {2})",
-                            новаяПлощадь.Id, random.Next(0, 100), random.Next(0, 100));
-                    }
-
-                    for (int i = 0; i < 3; i++)
-                    {
-                        var новыйПрофиль = new Профиль
-                        {
-                            Id = context.Профильs.Max(p => p.Id) + 1,
-                            Длина = random.Next(10, 1000),
-                            Высота = random.Next(10, 100),
-                            Описание = $"Профиль {i + 1}"
-                        };
-                        context.Профильs.Add(новыйПрофиль);
-                        context.SaveChanges();
-
-                        context.Database.ExecuteSqlRaw(
-                            "INSERT INTO список_профилей (id_площади, id_профиля) VALUES ({0}, {1})",
-                            новаяПлощадь.Id, новыйПрофиль.Id);
-
-                        for (int k = 0; k < 3; k++)
-                        {
-                            context.Database.ExecuteSqlRaw(
-                                "INSERT INTO координаты_профиля (id_площади, x, y) VALUES ({0}, {1}, {2})",
-                                новыйПрофиль.Id, random.Next(0, 100), random.Next(0, 100));
-                        }
-
-                        for (int j = 0; j < 3; j++)
-                        {
-                            var новоеИзмерение = new Измерения
-                            {
-                                Id = context.Измеренияs.Max(p => p.Id) + 1,
-                                Давление = random.Next(10, 1000) + j,
-                                Описание = $"Измерение {j + 1}"
-                            };
-                            context.Измеренияs.Add(новоеИзмерение);
-                            context.SaveChanges();
-
-                            var новыйПункт = new ПунктыНаблюд
-                            {
-                                Id = context.ПунктыНаблюдs.Max(p => p.Id) + 1,
-                                X = j * random.Next(1, 100),
-                                Y = j * random.Next(1, 100)
-                            };
-                            context.ПунктыНаблюдs.Add(новыйПункт);
-                            context.SaveChanges();
-
-                            context.Database.ExecuteSqlRaw(
-                                "INSERT INTO список_измерений (id_пункта, id_измерения) VALUES ({0}, {1})",
-                                новыйПункт.Id, новоеИзмерение.Id);
-
-                            context.Database.ExecuteSqlRaw(
-                                "INSERT INTO список_пунктов (id_профиля, id_пункта) VALUES ({0}, {1})",
-                                новыйПрофиль.Id, новыйПункт.Id);
-                        }
-                    }
-                    LoadData();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при создании проекта: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Ошибка при создании проекта: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
         }
+
+
+
+
+
 
 
     }
