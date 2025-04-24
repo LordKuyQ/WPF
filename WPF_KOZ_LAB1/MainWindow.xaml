@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_KOZ_LAB1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1600">
     <Grid>
+        <StackPanel>
+            <DataGrid x:Name="BronsDataGrid"
+                      ItemsSource="{Binding Brons}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
 
+            <DataGrid x:Name="ClientsDataGrid"
+                      ItemsSource="{Binding Clients}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
+
+            <DataGrid x:Name="InventoriesDataGrid"
+                      ItemsSource="{Binding Inventories}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
+
+            <DataGrid x:Name="SkidkasDataGrid"
+                      ItemsSource="{Binding Skidkas}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
+
+            <DataGrid x:Name="TypesDataGrid"
+                      ItemsSource="{Binding Types}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
+
+            <DataGrid x:Name="ZakazsDataGrid"
+                      ItemsSource="{Binding Zakazs}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
+
+            <DataGrid x:Name="ZakazSkidkasDataGrid"
+                      ItemsSource="{Binding ZakazSkidkas}"
+                      AutoGenerateColumns="True"
+                      Margin="10"/>
+        </StackPanel>
     </Grid>
 </Window>
