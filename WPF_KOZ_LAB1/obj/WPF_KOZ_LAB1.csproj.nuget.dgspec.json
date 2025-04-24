@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj": {}
+    "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj": {}
   },
   "projects": {
-    "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj": {
+    "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj",
+        "projectUniqueName": "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj",
         "projectName": "WPF_KOZ_LAB1",
-        "projectPath": "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj",
+        "projectPath": "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1.csproj",
         "packagesPath": "C:\\Users\\dvoker\\.nuget\\packages\\",
-        "outputPath": "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\WPF_KOZ_LAB1\\obj\\",
+        "outputPath": "X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,32 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
