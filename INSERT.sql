@@ -16,9 +16,9 @@ INSERT INTO "client" ("id", "fio", "telefon", "email") VALUES
 (2, 'Jane Smith', 9876543210, 'jane.smith@example.com');
 
 -- Insert sample data into the "bron" table
-INSERT INTO "bron" ("id", "dt_bron", "inv_id") VALUES
-(1, '2025-04-24 10:00:00', 1),
-(2, '2025-04-24 11:00:00', 2);
+INSERT INTO bron (id, dt_bron, inv_id) VALUES
+(1, CONVERT(datetime, '2025-04-24 10:00:00', 120), 1),
+(2, CONVERT(datetime, '2025-04-24 11:00:00', 120), 2);
 
 -- Insert sample data into the "skidka" table
 INSERT INTO "skidka" ("id", "pers") VALUES
@@ -27,8 +27,8 @@ INSERT INTO "skidka" ("id", "pers") VALUES
 
 -- Insert sample data into the "zakaz" table
 INSERT INTO "zakaz" ("id", "inv_id", "time", "clent_id") VALUES
-(1, 1, 1609459200, 1),
-(2, 2, 1609459200, 2);
+(1, 1, 10, 1),
+(2, 2, 10, 2);
 
 -- Insert sample data into the "zakaz_skidka" table
 INSERT INTO "zakaz_skidka" ("id", "id_zakaz", "id_skidka") VALUES

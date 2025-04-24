@@ -20,11 +20,16 @@ public partial class Laba1Context : DbContext
     public virtual DbSet<Zakaz> Zakazs { get; set; }
     public virtual DbSet<ZakazSkidka> ZakazSkidkas { get; set; }
 
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    optionsBuilder.UseSqlite("Data Source=X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\BD\\laba1.db");
+    //}
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=X:\\GIT\\WPF_KOZ\\WPF\\WPF_KOZ_LAB1\\BD\\laba1.db");
+        string connectionString = "Server=dbsrv\\PH2024;Database=учебная_NDA_labs;Trusted_Connection=True;TrustServerCertificate=True;";
+        optionsBuilder.UseSqlServer(connectionString);
     }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Bron>(entity =>
@@ -34,9 +39,7 @@ public partial class Laba1Context : DbContext
             entity.Property(e => e.Id)
                 .ValueGeneratedOnAdd()
                 .HasColumnName("id");
-            entity.Property(e => e.DtBron)
-                .HasColumnType("TIMESTAMP")
-                .HasColumnName("dt_bron");
+            entity.Property(e => e.Dt_Bron).HasColumnType("datetime");
             entity.Property(e => e.InvId).HasColumnName("inv_id");
 
             entity.HasOne(d => d.Inv)

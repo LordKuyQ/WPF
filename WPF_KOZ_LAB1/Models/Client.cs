@@ -9,7 +9,7 @@ public partial class Client
 
     public string Fio { get; set; } = null!;
 
-    public int Telefon { get; set; }
+    public long Telefon { get; set; }
 
     public string Email { get; set; } = null!;
 

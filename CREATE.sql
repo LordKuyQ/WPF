@@ -1,42 +1,42 @@
 CREATE TABLE "inventory"(
-    "id" BIGINT NOT NULL,
+    "id" INT NOT NULL,
     "description" VARCHAR(255) NOT NULL,
-    "size" BIGINT NOT NULL,
-    "type_id" BIGINT NOT NULL,
-    "price" BIGINT NOT NULL,
+    "size" INT NOT NULL,
+    "type_id" INT NOT NULL,
+    "price" INT NOT NULL,
     "model" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "inventory" ADD CONSTRAINT "inventory_id_primary" PRIMARY KEY("id");
 CREATE TABLE "type"(
-    "id" BIGINT NOT NULL,
+    "id" INT NOT NULL,
     "name" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "type" ADD CONSTRAINT "type_id_primary" PRIMARY KEY("id");
 CREATE TABLE "bron"(
-    "id" BIGINT NOT NULL,
+    "id" INT NOT NULL,
     "dt_bron" DATETIME NOT NULL,
-    "inv_id" BIGINT NOT NULL
+    "inv_id" INT NOT NULL
 );
 ALTER TABLE
     "bron" ADD CONSTRAINT "bron_id_primary" PRIMARY KEY("id");
 CREATE TABLE "skidka"(
-    "id" BIGINT NOT NULL,
-    "pers" BIGINT NOT NULL
+    "id" INT NOT NULL,
+    "pers" INT NOT NULL
 );
 ALTER TABLE
     "skidka" ADD CONSTRAINT "skidka_id_primary" PRIMARY KEY("id");
 CREATE TABLE "zakaz"(
-    "id" BIGINT NOT NULL,
-    "inv_id" BIGINT NOT NULL,
-    "time" BIGINT NOT NULL,
-    "clent_id" BIGINT NOT NULL
+    "id" INT NOT NULL,
+    "inv_id" INT NOT NULL,
+    "time" INT NOT NULL,
+    "clent_id" INT NOT NULL
 );
 ALTER TABLE
     "zakaz" ADD CONSTRAINT "zakaz_id_primary" PRIMARY KEY("id");
 CREATE TABLE "client"(
-    "id" BIGINT NOT NULL,
+    "id" INT NOT NULL,
     "fio" VARCHAR(255) NOT NULL,
     "telefon" BIGINT NOT NULL,
     "email" VARCHAR(255) NOT NULL
@@ -44,9 +44,9 @@ CREATE TABLE "client"(
 ALTER TABLE
     "client" ADD CONSTRAINT "client_id_primary" PRIMARY KEY("id");
 CREATE TABLE "zakaz_skidka"(
-    "id" BIGINT NOT NULL,
-    "id_zakaz" BIGINT NOT NULL,
-    "id_skidka" BIGINT NOT NULL
+    "id" INT NOT NULL,
+    "id_zakaz" INT NOT NULL,
+    "id_skidka" INT NOT NULL
 );
 ALTER TABLE
     "zakaz_skidka" ADD CONSTRAINT "zakaz_skidka_id_primary" PRIMARY KEY("id");
