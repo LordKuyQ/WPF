@@ -85,7 +85,7 @@ namespace SEP_Age {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SEP_Age;V1.0.0.0;component/addprofilewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SEP_Age;component/addprofilewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddProfileWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

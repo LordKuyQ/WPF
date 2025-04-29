@@ -12,6 +12,9 @@ using LiveCharts.Wpf;
 using System.Collections.ObjectModel;
 using SEP_Age.Auto;
 using Microsoft.EntityFrameworkCore;
+using LiveCharts.Configurations;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace SEP_Age
 {
@@ -260,31 +263,102 @@ namespace SEP_Age
         private void измеренияGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             CoordinatesChart.Visibility = Visibility.Hidden;
-            MeasurementsChart.Visibility = Visibility.Visible;
+            MeasurementsChart.Visibility = Visibility.Hidden;
+
+            SeriesCollection.Clear();
+
             var selectedMeasurement = измеренияGrid.SelectedItem as Измерения;
-            if (selectedMeasurement != null)
+            if (selectedMeasurement == null)
             {
-                var allMeasurements = GetAllMeasurements();
-                ChartValues.Clear();
+                MessageBox.Show("Выберите измерение для отображения графика.", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            var allMeasurements = GetAllMeasurements();
+            if (allMeasurements == null || !allMeasurements.Any())
+            {
+                MessageBox.Show("Нет данных для построения графика.", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            using (var context = new AppDbContext())
+            {
+                var profileIds = (from m in allMeasurements
+                                  join si in context.СписокИзмеренийs on m.Id equals si.IdИзмерения
+                                  join sp in context.СписокПунктовs on si.IdПункта equals sp.IdПункта
+                                  select sp.IdПрофиля).Distinct().ToList();
+
+                if (profileIds.Count > 1)
+                {
+                    MessageBox.Show("Измерения принадлежат разным профилям. Выберите измерения одного профиля.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+
+            try
+            {
+                var chartValues = new ChartValues<ObservablePoint>();
                 foreach (var measurement in allMeasurements)
                 {
-                    ChartValues.Add(new ObservableValue(measurement.Давление));
+                    chartValues.Add(new ObservablePoint(measurement.Расстояние, measurement.Давление));
                 }
 
-                var lineSeries = new LineSeries
+                var columnSeries = new ColumnSeries
                 {
-                    Title = "Измерения",
-                    Values = new ChartValues<ObservableValue>(ChartValues)
+                    Title = "Давление",
+                    Values = chartValues,
+                    Fill = System.Windows.Media.Brushes.Blue,
+                    Stroke = System.Windows.Media.Brushes.Black,
+                    StrokeThickness = 1,
+                    DataLabels = true,
+                    LabelPoint = point => $"{point.Y} ОМ",
+                    MaxColumnWidth = 20
                 };
 
-                SeriesCollection.Clear();
-                SeriesCollection.Add(lineSeries);
+                SeriesCollection.Add(columnSeries);
+
+                MeasurementsChart.AxisX.Clear();
+                MeasurementsChart.AxisX.Add(new Axis
+                {
+                    Title = "Расстояние по профилю (м)",
+                    Labels = allMeasurements.Select(m => $"{m.Расстояние} м").ToArray(),
+                    MinValue = allMeasurements.Min(m => m.Расстояние) - 10,
+                    MaxValue = allMeasurements.Max(m => m.Расстояние) + 10
+                });
+
+                MeasurementsChart.AxisY.Clear();
+                MeasurementsChart.AxisY.Add(new Axis
+                {
+                    Title = "Давление (ОМ)",
+                    MinValue = allMeasurements.Min(m => m.Давление) - 10,
+                    MaxValue = allMeasurements.Max(m => m.Давление) + 10,
+                    LabelFormatter = value => $"{value} ОМ"
+                });
+
+                MeasurementsChart.Series = SeriesCollection;
+                MeasurementsChart.Visibility = Visibility.Visible; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при построении графика: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
+
         private List<Измерения> GetAllMeasurements()
         {
-            return измеренияGrid.ItemsSource?.Cast<Измерения>().ToList();
+            var selectedПункт = пунктыНаблюденияGrid.SelectedItem as ПунктыНаблюд;
+            if (selectedПункт != null)
+            {
+                using (var context = new AppDbContext())
+                {
+                    return context.СписокИзмеренийs
+                        .Where(si => si.IdПункта == selectedПункт.Id)
+                        .Select(si => si.IdИзмеренияNavigation)
+                        .ToList();
+                }
+            }
+            return измеренияGrid.ItemsSource?.Cast<Измерения>().ToList() ?? new List<Измерения>();
         }
 
         private void сбросButton_Click(object sender, RoutedEventArgs e)
