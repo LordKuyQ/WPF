@@ -13,6 +13,9 @@ public partial class Проект
     [Column("id")]
     public int Id { get; set; }
 
+    [Column("название")]
+    public string Название { get; set; }
+
     [Column("дата_начала", TypeName = "DATE")]
     public DateOnly ДатаНачала { get; set; }
 

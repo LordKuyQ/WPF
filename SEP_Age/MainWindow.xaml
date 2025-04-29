@@ -77,9 +77,23 @@
                     <Label Content="Измерения" FontSize="16" FontWeight="Bold"/>
                     <DataGrid x:Name="измеренияGrid" Margin="0,32,0,0" MouseDoubleClick="измеренияGrid_MouseDoubleClick"/>
                 </Grid>
-                <Image Grid.Row="1" x:Name="pictureBox" Width="420" Height="360" Visibility="Hidden"/>
+                
+                <lvc:CartesianChart x:Name="CoordinatesChart" Grid.Row="1" Visibility="Hidden" Margin="10">
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Title="X" />
+                    </lvc:CartesianChart.AxisX>
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis Title="Y" />
+                    </lvc:CartesianChart.AxisY>
+                </lvc:CartesianChart>
+
+                <lvc:CartesianChart x:Name="MeasurementsChart" Grid.Row="1" Visibility="Hidden" Margin="10">
+                    <lvc:CartesianChart.Series>
+                        <lvc:LineSeries Title="Измерения" Values="{Binding ChartValues}" />
+                    </lvc:CartesianChart.Series>
+                </lvc:CartesianChart>
+
                 <DataGrid Grid.Row="1" x:Name="кордыGrid" Margin="0,32,0,0" Visibility="Hidden"/>
-                <lvc:CartesianChart Grid.Row="1" x:Name="MeasurementsChart" Series="{Binding SeriesCollection}" Visibility="Hidden"/>
             </Grid>
         </Grid>
         

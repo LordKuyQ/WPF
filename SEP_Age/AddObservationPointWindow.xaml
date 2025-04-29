@@ -1,0 +1,24 @@
+﻿<Window x:Class="SEP_Age.AddObservationPointWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SEP_Age"
+        mc:Ignorable="d"
+        Title="AddObservationPointWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="X:" Grid.Row="0" Margin="5"/>
+        <TextBox x:Name="XTextBox" Grid.Row="0" Margin="70,5,5,5"/>
+        <Label Content="Y:" Grid.Row="1" Margin="5"/>
+        <TextBox x:Name="YTextBox" Grid.Row="1" Margin="70,5,5,5"/>
+        <Label Content="Профиль:" Grid.Row="2" Margin="5"/>
+        <ComboBox x:Name="ProfileComboBox" Grid.Row="2" Margin="70,5,5,5" DisplayMemberPath="Id"/>
+        <Button Content="Сохранить" Grid.Row="3" Margin="5" Click="SaveButton_Click"/>
+    </Grid>
+</Window>

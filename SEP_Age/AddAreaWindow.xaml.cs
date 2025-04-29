@@ -17,9 +17,9 @@ namespace SEP_Age
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(NameTextBox.Text))
+            if (string.IsNullOrWhiteSpace(SqrTextBox.Text))
             {
-                MessageBox.Show("Введите название площади");
+                MessageBox.Show("Введите значение площади");
                 return;
             }
             if (ProjectComboBox.SelectedItem == null)
@@ -32,17 +32,17 @@ namespace SEP_Age
             {
                 var area = new Площадь
                 {
-                    Площадь1 = NameTextBox.Text надо в инт
+                    Площадь1 = int.Parse(SqrTextBox.Text),
                 };
                 context.Площадьs.Add(area);
+                context.SaveChanges();
 
                 var projectArea = new СписокПлощадей
                 {
-                    ProjectId = (ProjectComboBox.SelectedItem as Project).Id,
-                    AreaId = area.Id
+                    IdПроекта = (ProjectComboBox.SelectedItem as Проект).Id,
+                    IdПлощади = area.Id
                 };
-                context.СписокИзмеренийs.Add(projectArea);
-
+                context.СписокПлощадейs.Add(projectArea);
                 context.SaveChanges();
                 this.Close();
             }

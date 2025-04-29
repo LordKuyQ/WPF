@@ -5,12 +5,10 @@ using System.Windows.Input;
 using System.Data.Entity;
 using SEP_Age.Models;
 using System.Windows.Media;
-using System.Drawing;
 using System.Windows.Media.Imaging;
 using LiveCharts;
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
-using LiveCharts.Definitions.Charts;
 using System.Collections.ObjectModel;
 using SEP_Age.Auto;
 using Microsoft.EntityFrameworkCore;
@@ -44,9 +42,9 @@ namespace SEP_Age
 
             ПроектыBtn.Click += (s, e) => new AddProjectWindow().ShowDialog();
             ПлощадиBtn.Click += (s, e) => new AddAreaWindow().ShowDialog();
-            //ПрофилиBtn.Click += (s, e) => new AddProfileWindow().ShowDialog();
-            //ПунктыНаблюденияBtn.Click += (s, e) => new AddObservationPointWindow().ShowDialog();
-            //ИзмеренияBtn.Click += (s, e) => new AddMeasurementWindow().ShowDialog();
+            ПрофилиBtn.Click += (s, e) => new AddProfileWindow().ShowDialog();
+            ПунктыНаблюденияBtn.Click += (s, e) => new AddObservationPointWindow().ShowDialog();
+            ИзмеренияBtn.Click += (s, e) => new AddMeasurementWindow().ShowDialog();
 
             LoadData();
         }
@@ -111,74 +109,111 @@ namespace SEP_Age
                 }
             }
         }
+
         private void DrawПлощади(List<КоординатыПлощади> координаты)
         {
-            pictureBox.Visibility = Visibility.Visible;
             MeasurementsChart.Visibility = Visibility.Hidden;
-            Bitmap bitmap = new Bitmap(420, 360);
-            using (Graphics graphics = Graphics.FromImage(bitmap))
+            CoordinatesChart.Visibility = Visibility.Visible;
+
+            SeriesCollection.Clear();
+
+            if (координаты == null || координаты.Count == 0)
             {
-
-                graphics.Clear(System.Drawing.Color.White);
-                System.Drawing.Pen pen = new System.Drawing.Pen(System.Drawing.Color.Black, 1);
-
-                if (координаты.Count > 1)
-                {
-                    for (int i = 1; i < координаты.Count; i++)
-                    {
-                        graphics.DrawLine(pen, координаты[i - 1].X, координаты[i - 1].Y, координаты[i].X, координаты[i].Y);
-                    }
-                    graphics.DrawLine(pen, координаты[координаты.Count - 1].X, координаты[координаты.Count - 1].Y, координаты[0].X, координаты[0].Y);
-                }
+                return;
             }
 
-            using (var memory = new System.IO.MemoryStream())
+            var points = new ChartValues<ObservablePoint>();
+            foreach (var coord in координаты)
             {
-                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
-                memory.Position = 0;
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.StreamSource = memory;
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.EndInit();
-
-                pictureBox.Source = bitmapImage;
+                points.Add(new ObservablePoint(coord.X, coord.Y));
             }
+            if (координаты.Count > 0)
+            {
+                points.Add(new ObservablePoint(координаты[0].X, координаты[0].Y));
+            }
+
+            var polygonSeries = new LineSeries
+            {
+                Title = "Площадь",
+                Values = points,
+                Stroke = System.Windows.Media.Brushes.Black,
+                Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromArgb(100, 0, 128, 255)), 
+                LineSmoothness = 0,
+                StrokeThickness = 2
+            };
+
+            var pointsSeries = new ScatterSeries
+            {
+                Title = "Точки площади",
+                Values = new ChartValues<ObservablePoint>(координаты.Select(c => new ObservablePoint(c.X, c.Y))),
+                Stroke = System.Windows.Media.Brushes.Red, 
+                Fill = System.Windows.Media.Brushes.Red, 
+                StrokeThickness = 8 
+            };
+
+            SeriesCollection.Add(polygonSeries);
+            SeriesCollection.Add(pointsSeries);
+
+            if (координаты.Any())
+            {
+                CoordinatesChart.AxisX[0].MinValue = координаты.Min(c => c.X) - 10;
+                CoordinatesChart.AxisX[0].MaxValue = координаты.Max(c => c.X) + 10;
+                CoordinatesChart.AxisY[0].MinValue = координаты.Min(c => c.Y) - 10;
+                CoordinatesChart.AxisY[0].MaxValue = координаты.Max(c => c.Y) + 10;
+            }
+
+            CoordinatesChart.Series = SeriesCollection;
         }
 
         private void DrawПрофили(List<КоординатыПрофиля> координаты)
         {
-            pictureBox.Visibility = Visibility.Visible;
             MeasurementsChart.Visibility = Visibility.Hidden;
-            Bitmap bitmap = new Bitmap(420, 360);
-            using (Graphics graphics = Graphics.FromImage(bitmap))
+            CoordinatesChart.Visibility = Visibility.Visible;
+
+            SeriesCollection.Clear();
+
+            if (координаты == null || координаты.Count == 0)
             {
-
-                graphics.Clear(System.Drawing.Color.White);
-                System.Drawing.Pen pen = new System.Drawing.Pen(System.Drawing.Color.Black, 1);
-
-                if (координаты.Count > 1)
-                {
-                    for (int i = 1; i < координаты.Count; i++)
-                    {
-                        graphics.DrawLine(pen, координаты[i - 1].X, координаты[i - 1].Y, координаты[i].X, координаты[i].Y);
-                    }
-                    graphics.DrawLine(pen, координаты[координаты.Count - 1].X, координаты[координаты.Count - 1].Y, координаты[0].X, координаты[0].Y);
-                }
+                return;
             }
 
-            using (var memory = new System.IO.MemoryStream())
+            var points = new ChartValues<ObservablePoint>();
+            foreach (var coord in координаты)
             {
-                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
-                memory.Position = 0;
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.StreamSource = memory;
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.EndInit();
-
-                pictureBox.Source = bitmapImage;
+                points.Add(new ObservablePoint(coord.X, coord.Y));
             }
+
+            var lineSeries = new LineSeries
+            {
+                Title = "Профиль",
+                Values = points,
+                Stroke = System.Windows.Media.Brushes.Blue,
+                Fill = System.Windows.Media.Brushes.Transparent,
+                LineSmoothness = 0, 
+                StrokeThickness = 2
+            };
+
+            var pointsSeries = new ScatterSeries
+            {
+                Title = "Точки профиля",
+                Values = new ChartValues<ObservablePoint>(координаты.Select(c => new ObservablePoint(c.X, c.Y))),
+                Stroke = System.Windows.Media.Brushes.Red,
+                Fill = System.Windows.Media.Brushes.Red,
+                StrokeThickness = 8 
+            };
+
+            SeriesCollection.Add(lineSeries);
+            SeriesCollection.Add(pointsSeries);
+
+            if (координаты.Any())
+            {
+                CoordinatesChart.AxisX[0].MinValue = координаты.Min(c => c.X) - 10;
+                CoordinatesChart.AxisX[0].MaxValue = координаты.Max(c => c.X) + 10;
+                CoordinatesChart.AxisY[0].MinValue = координаты.Min(c => c.Y) - 10;
+                CoordinatesChart.AxisY[0].MaxValue = координаты.Max(c => c.Y) + 10;
+            }
+
+            CoordinatesChart.Series = SeriesCollection;
         }
 
         private void профилиGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -196,7 +231,7 @@ namespace SEP_Age
                     пунктыНаблюденияGrid.ItemsSource = пункты;
 
                     var координаты = _context.КоординатыПрофиляs
-                        .Where(k => k.IdПлощади == selectedПрофиль.Id)
+                        .Where(k => k.IdПлощади == selectedПрофиль.Id) 
                         .ToList();
 
                     кордыGrid.ItemsSource = координаты;
@@ -224,7 +259,7 @@ namespace SEP_Age
         }
         private void измеренияGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            pictureBox.Visibility = Visibility.Hidden;
+            CoordinatesChart.Visibility = Visibility.Hidden;
             MeasurementsChart.Visibility = Visibility.Visible;
             var selectedMeasurement = измеренияGrid.SelectedItem as Измерения;
             if (selectedMeasurement != null)
@@ -264,27 +299,27 @@ namespace SEP_Age
                     пунктыНаблюденияGrid.ItemsSource = _context.ПунктыНаблюдs.ToList();
                     измеренияGrid.ItemsSource = _context.Измеренияs.ToList();
                     кордыGrid.ItemsSource = null;
-                    pictureBox.Source = null;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка при сбросе данных: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            pictureBox.Visibility = Visibility.Hidden;
+            CoordinatesChart.Visibility = Visibility.Hidden;
             MeasurementsChart.Visibility = Visibility.Hidden;
         }
 
         private void синтButton_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 using (var context = new AppDbContext())
                 {
                     var random = new Random();
 
                     var новыйПроект = new Проект
                     {
+                        Название = "Синтетический проект",
                         ДатаНачала = DateOnly.FromDateTime(DateTime.Today),
                         ДатаКонца = DateOnly.FromDateTime(DateTime.Today.AddDays(30)),
                         Цена = random.Next(10000, 10000000)
@@ -292,8 +327,7 @@ namespace SEP_Age
 
                     var новаяПлощадь = new Площадь
                     {
-                        Площадь1 = random.Next(10, 1000),
-                        Координаты = random.Next(100, 1000)
+                        Площадь1 = random.Next(10, 1000)
                     };
 
                     var координатаПлощади = new КоординатыПлощади
@@ -327,17 +361,20 @@ namespace SEP_Age
                         IdПрофиляNavigation = профиль
                     });
 
-                    context.КоординатыПрофиляs.Add(new КоординатыПрофиля
+                    var координатаПрофиля = new КоординатыПрофиля
                     {
-                        IdПлощадиNavigation = новаяПлощадь,
                         X = random.Next(0, 100),
-                        Y = random.Next(0, 100)
-                    });
+                        Y = random.Next(0, 100),
+                        IdПлощадиNavigation = новаяПлощадь
+                    };
+                    context.КоординатыПрофиляs.Add(координатаПрофиля);
 
                     var измерение = new Измерения
                     {
                         Давление = random.Next(10, 1000),
-                        Описание = "Измерение 1"
+                        Описание = "Измерение 1",
+                        АбсолютнаяВысота = random.Next(100, 1000), 
+                        Расстояние = random.Next(1, 100) 
                     };
                     context.Измеренияs.Add(измерение);
 
@@ -362,11 +399,11 @@ namespace SEP_Age
 
                     context.SaveChanges();
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Ошибка при создании проекта: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при создании проекта: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 

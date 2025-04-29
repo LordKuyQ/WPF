@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 X:\GIT\WPF\SEP_Age\App.xaml
-5-1110390372
+8-274116079
 
-271618577322
+27-1839676617
 2271232934979
-AddAreaWindow.xaml;AddProjectWindow.xaml;Auto\AutUser.xaml;Auto\RegUser.xaml;MainWindow.xaml;
+AddAreaWindow.xaml;AddMeasurementWindow.xaml;AddObservationPointWindow.xaml;AddProfileWindow.xaml;AddProjectWindow.xaml;Auto\AutUser.xaml;Auto\RegUser.xaml;MainWindow.xaml;
 
 False
 

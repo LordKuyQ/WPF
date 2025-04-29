@@ -6,17 +6,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SEP_Age"
         mc:Ignorable="d"
-        Title="AddProjectWindow" Height="768" Width="1366">
+        Title="AddProjectWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Label Content="Название:" Grid.Row="0" Margin="5"/>
-        <TextBox x:Name="NameTextBox" Grid.Row="0" Margin="70,5,5,5"/>
-        <Label Content="Описание:" Grid.Row="1" Margin="5"/>
-        <TextBox x:Name="DescriptionTextBox" Grid.Row="1" Margin="70,5,5,5" Height="100" TextWrapping="Wrap"/>
-        <Button Content="Сохранить" Grid.Row="2" Margin="5" Click="SaveButton_Click"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="0" Margin="80,5,5,5"/>
+        <Label Content="Дата начала:" Grid.Row="1" Margin="5"/>
+        <DatePicker x:Name="StartDatePicker" Grid.Row="1" Margin="80,5,5,5"/>
+        <Label Content="Дата конца:" Grid.Row="2" Margin="5"/>
+        <DatePicker x:Name="EndDatePicker" Grid.Row="2" Margin="80,5,5,5"/>
+        <Label Content="Цена:" Grid.Row="3" Margin="5"/>
+        <TextBox x:Name="PriceTextBox" Grid.Row="3" Margin="80,5,5,5"/>
+        <Button Content="Сохранить" Grid.Row="4" Margin="5" Click="SaveButton_Click"/>
     </Grid>
 </Window>
