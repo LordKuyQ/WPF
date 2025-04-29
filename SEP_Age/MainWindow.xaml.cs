@@ -41,6 +41,13 @@ namespace SEP_Age
             }
 
             InitializeComponent();
+
+            ПроектыBtn.Click += (s, e) => new AddProjectWindow().ShowDialog();
+            ПлощадиBtn.Click += (s, e) => new AddAreaWindow().ShowDialog();
+            //ПрофилиBtn.Click += (s, e) => new AddProfileWindow().ShowDialog();
+            //ПунктыНаблюденияBtn.Click += (s, e) => new AddObservationPointWindow().ShowDialog();
+            //ИзмеренияBtn.Click += (s, e) => new AddMeasurementWindow().ShowDialog();
+
             LoadData();
         }
 

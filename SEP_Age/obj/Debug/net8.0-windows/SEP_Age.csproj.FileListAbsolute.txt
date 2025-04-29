@@ -517,3 +517,5 @@ X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\SEP_Age.sourcelink.json
 X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\SEP_Age.csproj.Up2Date
 X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\SEP_Age.genruntimeconfig.cache
 X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\ref\SEP_Age.dll
+X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\AddAreaWindow.g.cs
+X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\AddProjectWindow.g.cs
