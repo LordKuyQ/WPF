@@ -42,7 +42,7 @@ public partial class AppDbContext : DbContext
     public virtual DbSet<СписокУчастников> СписокУчастниковs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlite("Data Source=X:\\GIT\\WPF\\SEP_Age\\BD\\BD.db");
+        => optionsBuilder.UseSqlite("Data Source=G:\\6SENESTR\\AGE\\LordKuyQ\\WPF\\SEP_Age\\BD\\BD.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -55,14 +55,14 @@ public partial class AppDbContext : DbContext
         {
             entity.HasOne(d => d.IdПлощадиNavigation)
                   .WithMany(p => p.КоординатыПлощадиs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<КоординатыПрофиля>(entity =>
         {
             entity.HasOne(d => d.IdПлощадиNavigation)
                   .WithMany(p => p.КоординатыПрофиляs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Площадь>(entity =>
@@ -94,59 +94,61 @@ public partial class AppDbContext : DbContext
         {
             entity.HasOne(d => d.IdИзмеренияNavigation)
                   .WithMany(p => p.СписокИзмеренийs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
 
             entity.HasOne(d => d.IdПунктаNavigation)
                   .WithMany(p => p.СписокИзмеренийs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<СписокПлощадей>(entity =>
         {
             entity.HasOne(d => d.IdПлощадиNavigation)
                   .WithMany(p => p.СписокПлощадейs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
 
             entity.HasOne(d => d.IdПроектаNavigation)
                   .WithMany(p => p.СписокПлощадейs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<СписокПрофилей>(entity =>
         {
             entity.HasOne(d => d.IdПлощадиNavigation)
                   .WithMany(p => p.СписокПрофилейs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
 
             entity.HasOne(d => d.IdПрофиляNavigation)
                   .WithMany(p => p.СписокПрофилейs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<СписокПунктов>(entity =>
         {
             entity.HasOne(d => d.IdПрофиляNavigation)
                   .WithMany(p => p.СписокПунктовs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
 
             entity.HasOne(d => d.IdПунктаNavigation)
                   .WithMany(p => p.СписокПунктовs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<СписокУчастников>(entity =>
         {
             entity.HasOne(d => d.IdПользователяNavigation)
                   .WithMany(p => p.СписокУчастниковs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
 
             entity.HasOne(d => d.IdПроектаNavigation)
                   .WithMany(p => p.СписокУчастниковs)
-                  .OnDelete(DeleteBehavior.ClientSetNull);
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         OnModelCreatingPartial(modelBuilder);
     }
+
+
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

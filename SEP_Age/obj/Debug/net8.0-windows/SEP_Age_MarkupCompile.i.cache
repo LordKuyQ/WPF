@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-X:\GIT\WPF\SEP_Age\obj\Debug\net8.0-windows\
+G:\6SENESTR\AGE\LordKuyQ\WPF\SEP_Age\obj\Debug\net8.0-windows\
 SEP_Age
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-X:\GIT\WPF\SEP_Age\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+G:\6SENESTR\AGE\LordKuyQ\WPF\SEP_Age\App.xaml
 8-274116079
 
 27-1839676617
-2271232934979
+2272047111423
 AddAreaWindow.xaml;AddMeasurementWindow.xaml;AddObservationPointWindow.xaml;AddProfileWindow.xaml;AddProjectWindow.xaml;Auto\AutUser.xaml;Auto\RegUser.xaml;MainWindow.xaml;
 
 False

@@ -482,12 +482,185 @@ namespace SEP_Age
 
 
 
+        private void ПроектыDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Проект>(проектыGrid);
+        }
 
+        private void ПлощадиDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Площадь>(площадиGrid);
+        }
 
+        private void ПрофилиDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Профиль>(профилиGrid);
+        }
 
+        private void ПунктыНаблюденияDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<ПунктыНаблюд>(пунктыНаблюденияGrid);
+        }
 
+        private void ИзмеренияDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Измерения>(измеренияGrid);
+        }
+
+        private void DeleteSelectedItems<T>(DataGrid dataGrid) where T : class
+        {
+            var selectedItems = dataGrid.SelectedItems.Cast<T>().ToList();
+            if (selectedItems.Count == 0)
+            {
+                MessageBox.Show("Выберите элементы для удаления.", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var context = new AppDbContext())
+                {
+                    foreach (var item in selectedItems)
+                    {
+                        DeleteItemRecursively(context, item);
+                    }
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при удалении элементов: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void DeleteItemRecursively(AppDbContext context, object item)
+        {
+            try
+            {
+                switch (item)
+                {
+                    case Проект проект:
+                        DeleteProjectRecursively(context, проект);
+                        break;
+                    case Площадь площадь:
+                        DeleteПлощадьRecursively(context, площадь);
+                        break;
+                    case Профиль профиль:
+                        DeleteПрофильRecursively(context, профиль);
+                        break;
+                    case ПунктыНаблюд пункт:
+                        DeleteПунктRecursively(context, пункт);
+                        break;
+                    case Измерения измерение:
+                        context.Измеренияs.Remove(измерение);
+                        break;
+                    default:
+                        throw new NotSupportedException($"Удаление для типа {item.GetType().Name} не поддерживается.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при удалении элемента: {ex.Message}");
+            }
+        }
+
+        private void DeleteProjectRecursively(AppDbContext context, Проект проект)
+        {
+            try
+            {
+                var площади = context.СписокПлощадейs
+                    .Where(sp => sp.IdПроекта == проект.Id)
+                    .Select(sp => sp.IdПлощадиNavigation)
+                    .ToList();
+
+                foreach (var площадь in площади)
+                {
+                    DeleteПлощадьRecursively(context, площадь);
+                }
+
+                context.Проектs.Remove(проект);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при удалении проекта: {ex.Message}");
+            }
+        }
+
+        private void DeleteПлощадьRecursively(AppDbContext context, Площадь площадь)
+        {
+            try
+            {
+                var профили = context.СписокПрофилейs
+                    .Where(sp => sp.IdПлощади == площадь.Id)
+                    .Select(sp => sp.IdПрофиляNavigation)
+                    .ToList();
+
+                foreach (var профиль in профили)
+                {
+                    DeleteПрофильRecursively(context, профиль);
+                }
+
+                var координатыПлощади = context.КоординатыПлощадиs
+                    .Where(k => k.IdПлощади == площадь.Id)
+                    .ToList();
+
+                context.КоординатыПлощадиs.RemoveRange(координатыПлощади);
+                context.Площадьs.Remove(площадь);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при удалении площади: {ex.Message}");
+            }
+        }
+
+        private void DeleteПрофильRecursively(AppDbContext context, Профиль профиль)
+        {
+            try
+            {
+                var пункты = context.СписокПунктовs
+                    .Where(sp => sp.IdПрофиля == профиль.Id)
+                    .Select(sp => sp.IdПунктаNavigation)
+                    .ToList();
+
+                foreach (var пункт in пункты)
+                {
+                    DeleteПунктRecursively(context, пункт);
+                }
+
+                var координатыПрофиля = context.КоординатыПрофиляs
+                    .Where(k => k.IdПлощади == профиль.Id)
+                    .ToList();
+
+                context.КоординатыПрофиляs.RemoveRange(координатыПрофиля);
+                context.Профильs.Remove(профиль);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при удалении профиля: {ex.Message}");
+            }
+        }
+
+        private void DeleteПунктRecursively(AppDbContext context, ПунктыНаблюд пункт)
+        {
+            try
+            {
+                var измерения = context.СписокИзмеренийs
+                    .Where(si => si.IdПункта == пункт.Id)
+                    .Select(si => si.IdИзмеренияNavigation)
+                    .ToList();
+
+                foreach (var измерение in измерения)
+                {
+                    context.Измеренияs.Remove(измерение);
+                }
+
+                context.ПунктыНаблюдs.Remove(пункт);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при удалении пункта наблюдения: {ex.Message}");
+            }
+        }
     }
-
-
 }
 
