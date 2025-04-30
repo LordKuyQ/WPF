@@ -472,6 +472,7 @@ namespace SEP_Age
                     });
 
                     context.SaveChanges();
+                    LoadData();
                 }
             }
             catch (Exception ex)
@@ -481,31 +482,6 @@ namespace SEP_Age
         }
 
 
-
-        private void ПроектыDelete_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteSelectedItems<Проект>(проектыGrid);
-        }
-
-        private void ПлощадиDelete_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteSelectedItems<Площадь>(площадиGrid);
-        }
-
-        private void ПрофилиDelete_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteSelectedItems<Профиль>(профилиGrid);
-        }
-
-        private void ПунктыНаблюденияDelete_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteSelectedItems<ПунктыНаблюд>(пунктыНаблюденияGrid);
-        }
-
-        private void ИзмеренияDelete_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteSelectedItems<Измерения>(измеренияGrid);
-        }
 
         private void DeleteSelectedItems<T>(DataGrid dataGrid) where T : class
         {
@@ -525,6 +501,7 @@ namespace SEP_Age
                         DeleteItemRecursively(context, item);
                     }
                     context.SaveChanges();
+                    LoadData();
                 }
             }
             catch (Exception ex)
@@ -552,7 +529,7 @@ namespace SEP_Age
                         DeleteПунктRecursively(context, пункт);
                         break;
                     case Измерения измерение:
-                        context.Измеренияs.Remove(измерение);
+                        DeleteИзмеренияRecursively(context, измерение);
                         break;
                     default:
                         throw new NotSupportedException($"Удаление для типа {item.GetType().Name} не поддерживается.");
@@ -577,7 +554,16 @@ namespace SEP_Age
                 {
                     DeleteПлощадьRecursively(context, площадь);
                 }
+                var связанныеПлощади = context.СписокПлощадейs
+                    .Where(sp => sp.IdПроекта == проект.Id)
+                    .ToList();
 
+                context.СписокПлощадейs.RemoveRange(связанныеПлощади);
+                var связанныеУчастники = context.СписокУчастниковs
+                    .Where(su => su.IdПроекта == проект.Id)
+                    .ToList();
+
+                context.СписокУчастниковs.RemoveRange(связанныеУчастники);
                 context.Проектs.Remove(проект);
             }
             catch (Exception ex)
@@ -585,6 +571,8 @@ namespace SEP_Age
                 throw new Exception($"Ошибка при удалении проекта: {ex.Message}");
             }
         }
+
+
 
         private void DeleteПлощадьRecursively(AppDbContext context, Площадь площадь)
         {
@@ -599,12 +587,26 @@ namespace SEP_Age
                 {
                     DeleteПрофильRecursively(context, профиль);
                 }
-
                 var координатыПлощади = context.КоординатыПлощадиs
                     .Where(k => k.IdПлощади == площадь.Id)
                     .ToList();
 
                 context.КоординатыПлощадиs.RemoveRange(координатыПлощади);
+                var координатыПрофиля = context.КоординатыПрофиляs
+                    .Where(k => k.IdПлощади == площадь.Id)
+                    .ToList();
+
+                context.КоординатыПрофиляs.RemoveRange(координатыПрофиля);
+                var связанныеПлощади = context.СписокПлощадейs
+                    .Where(sp => sp.IdПлощади == площадь.Id)
+                    .ToList();
+
+                context.СписокПлощадейs.RemoveRange(связанныеПлощади);
+                var связанныеПрофили = context.СписокПрофилейs
+                    .Where(sp => sp.IdПлощади == площадь.Id)
+                    .ToList();
+
+                context.СписокПрофилейs.RemoveRange(связанныеПрофили);
                 context.Площадьs.Remove(площадь);
             }
             catch (Exception ex)
@@ -612,6 +614,8 @@ namespace SEP_Age
                 throw new Exception($"Ошибка при удалении площади: {ex.Message}");
             }
         }
+
+
 
         private void DeleteПрофильRecursively(AppDbContext context, Профиль профиль)
         {
@@ -631,7 +635,12 @@ namespace SEP_Age
                     .Where(k => k.IdПлощади == профиль.Id)
                     .ToList();
 
+                var связанныеПрофили = context.СписокПрофилейs
+                    .Where(sp => sp.IdПрофиля == профиль.Id)
+                    .ToList();
+
                 context.КоординатыПрофиляs.RemoveRange(координатыПрофиля);
+                context.СписокПрофилейs.RemoveRange(связанныеПрофили);
                 context.Профильs.Remove(профиль);
             }
             catch (Exception ex)
@@ -639,6 +648,7 @@ namespace SEP_Age
                 throw new Exception($"Ошибка при удалении профиля: {ex.Message}");
             }
         }
+
 
         private void DeleteПунктRecursively(AppDbContext context, ПунктыНаблюд пункт)
         {
@@ -651,9 +661,14 @@ namespace SEP_Age
 
                 foreach (var измерение in измерения)
                 {
-                    context.Измеренияs.Remove(измерение);
+                    DeleteИзмеренияRecursively(context, измерение);
                 }
 
+                var связанныеПункты = context.СписокПунктовs
+                    .Where(sp => sp.IdПункта == пункт.Id)
+                    .ToList();
+
+                context.СписокПунктовs.RemoveRange(связанныеПункты);
                 context.ПунктыНаблюдs.Remove(пункт);
             }
             catch (Exception ex)
@@ -661,6 +676,51 @@ namespace SEP_Age
                 throw new Exception($"Ошибка при удалении пункта наблюдения: {ex.Message}");
             }
         }
+
+
+        private void DeleteИзмеренияRecursively(AppDbContext context, Измерения измерение)
+        {
+            try
+            {
+                var связанныеЗаписи = context.СписокИзмеренийs
+                    .Where(si => si.IdИзмерения == измерение.Id)
+                    .ToList();
+
+                context.СписокИзмеренийs.RemoveRange(связанныеЗаписи);
+                context.Измеренияs.Remove(измерение);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при удалении измерения: {ex.Message}");
+            }
+        }
+
+        private void ПроектыDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Проект>(проектыGrid);
+        }
+
+        private void ПлощадиDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Площадь>(площадиGrid);
+        }
+
+        private void ПрофилиDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Профиль>(профилиGrid);
+        }
+
+        private void ПунктыНаблюденияDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<ПунктыНаблюд>(пунктыНаблюденияGrid);
+        }
+
+        private void ИзмеренияDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteSelectedItems<Измерения>(измеренияGrid);
+        }
+
+
     }
 }
 

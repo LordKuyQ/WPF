@@ -48,7 +48,9 @@ public partial class AppDbContext : DbContext
     {
         modelBuilder.Entity<Измерения>(entity =>
         {
-            entity.Property(e => e.Id);
+            entity.HasMany(e => e.СписокИзмеренийs)
+                  .WithOne(e => e.IdИзмеренияNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<КоординатыПлощади>(entity =>
@@ -67,27 +69,53 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<Площадь>(entity =>
         {
-            entity.Property(e => e.Id);
+            entity.HasMany(p => p.СписокПлощадейs)
+                  .WithOne(d => d.IdПлощадиNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasMany(p => p.СписокПрофилейs)
+                  .WithOne(d => d.IdПлощадиNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Пользователь>(entity =>
         {
-            entity.Property(e => e.Id);
+            entity.HasMany(p => p.СписокУчастниковs)
+                  .WithOne(d => d.IdПользователяNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Проект>(entity =>
         {
-            entity.Property(e => e.Id);
+            entity.HasMany(p => p.СписокПлощадейs)
+                  .WithOne(d => d.IdПроектаNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasMany(p => p.СписокУчастниковs)
+                  .WithOne(d => d.IdПроектаNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Профиль>(entity =>
         {
-            entity.Property(e => e.Id);
+            entity.HasMany(p => p.СписокПрофилейs)
+                  .WithOne(d => d.IdПрофиляNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasMany(p => p.СписокПунктовs)
+                  .WithOne(d => d.IdПрофиляNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<ПунктыНаблюд>(entity =>
         {
-            entity.Property(e => e.Id);
+            entity.HasMany(p => p.СписокИзмеренийs)
+                  .WithOne(d => d.IdПунктаNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasMany(p => p.СписокПунктовs)
+                  .WithOne(d => d.IdПунктаNavigation)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<СписокИзмерений>(entity =>
