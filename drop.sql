@@ -10,4 +10,4 @@ Drop table Измерения;
 Drop table Пункты_наблюд;
 Drop table Профиль;
 Drop table Площадь;
-Drop table проект;
+Drop table Проект;

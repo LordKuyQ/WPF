@@ -42,7 +42,7 @@ public partial class AppDbContext : DbContext
     public virtual DbSet<СписокУчастников> СписокУчастниковs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlite("Data Source=G:\\6SENESTR\\AGE\\LordKuyQ\\WPF\\SEP_Age\\BD\\BD.db");
+        => optionsBuilder.UseSqlite("Data Source=X:\\GIT\\WPF\\SEP_Age\\BD\\BD.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

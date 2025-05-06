@@ -3,7 +3,8 @@ CREATE TABLE Проект (
     id INTEGER PRIMARY KEY NOT NULL,
     дата_начала DATE NOT NULL,
     дата_конца DATE NOT NULL,
-    цена INTEGER NOT NULL
+    цена INTEGER NOT NULL,
+    название TEXT NOT NULL
 );
 
 -- Создание таблицы Площадь
